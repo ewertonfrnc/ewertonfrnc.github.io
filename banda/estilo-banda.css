@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+header img {
+  max-width: 100%;
+}
+
+
+/* NAVEGAÇÃO */
+.nav {
+  background-color: black;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav li a {
+  display: inline-block;
+  padding: .5em;
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase ;
+}
+
+.nav li a:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+/* SEÇÃO A BANDA */
+.banda {
+  max-width: 800px;
+  padding: 2em;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.banda p {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 1em;
+  text-align: justify;
+}
+
+.banda h1 + p {
+  font-style: italic;
+  color: rgb(141, 141, 141);
+  margin-top: .5em;
+  text-align: center;
+}
+
+.membros {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.membro {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.membro img {
+  max-width: 60%;
+}
+
+.membro p {
+  text-align: center;
+}
+
+/* SEÇÃO AGENDA */
+.agenda {
+  background-color: black;
+  color: whitesmoke;
+  padding: 3em 0;
+}
+
+.agenda h2 + p {
+  font-style: italic;
+  color: rgb(141, 141, 141);
+  margin-top: .5em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.agenda ul {
+  background-color: white;
+  list-style-type: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.agenda li {
+  font-family: "Lato", sans-serif;
+  color: #757575;
+  border-bottom: 1px solid #ddd;
+  padding: 1em;
+}
+
+.agenda li span {
+  color: white;
+  background: #f44336;
+  padding: 2px 18px;
+  margin-left: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.agenda .restante {
+  background: black;
+  color: white;
+  float: right;
+  border-radius: 10%;
+}
+
+/* Agenda → cartões */
+.imagensAgenda {
+  max-width: 800px;
+  margin: 2em auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 0 1em;
+}
+
+.card {
+  background-color: snow;
+  color :black;
+  margin: 5px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card img:hover {
+  
+}
+
+.card-info {
+  padding: 1em;
+}
+
+.card h3, p {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.card span {
+  opacity: .6;
+}
+
+.card button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.card button:hover {
+  background-color: lightgray;
+  color: black;
+}

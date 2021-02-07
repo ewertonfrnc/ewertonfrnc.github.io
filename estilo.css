@@ -1,0 +1,38 @@
+body {
+    background-color: #333;
+    font-family: 'Big Shoulders Display', cursive;
+  }
+  
+  .container {
+    border-radius: 2px;
+    padding: 2em;
+    max-width: 500px;
+    margin: 5em auto;
+    background-color: #F0F7F4;
+  }
+  
+  p, a {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    flex-flow: column;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #333;
+    margin-top: 10px;
+  }
+  
+  a:hover, a:focus {
+    transition: .4s;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 1px 1px 5px black;
+    color: #F0F7F4;
+  }
