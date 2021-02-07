@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana,sans-serif;
+  }
+  
+  header {
+    background: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,.3);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  
+  nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    color: #333;
+    font-size: 18px;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    transition: .3s;
+    background-color: #333;
+    color: white;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu a {
+  }
+  
+  main {
+    position: relative;
+    z-index: -1;
+  }
+  
+  main h1 {
+    opacity: 0.93;
+    color: white;
+    font-weight: 400;
+    font-family: "Segoe UI",Arial,sans-serif;
+    
+    position: absolute;
+    top: 50%;
+    left: 40%;
+  }
+  main span { 
+    background-color: rgba(0,0,0,0.85);
+    padding: 5px 15px;
+  }
+  
+  main img {
+    max-width: 100%;
+  }
+  
+  .projetos-container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .projetos-container h2 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    font-weight: 400;
+  }
+  
+  .galeria {
+    margin: auto;
+    margin-top: 40px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1em;
+  }
+  
+  .projeto {
+    position: relative;
+    z-index: -1;
+  }
+  
+  .projeto p {
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .projeto img {
+    max-width: 100%;
+  }
+  
+  .sobre {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .sobre h2 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    font-weight: 400;
+  }
+  
+  .sobre p {
+    margin: 20px 0 30px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .time {
+    max-width: 90%;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .pessoa {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .pessoa h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 600;
+  }
+  
+  .pessoa h3 + p {
+    opacity: .6;
+    padding: 10px 0;
+  }
+  
+  .pessoa img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    filter: grayscale(60%);
+  }
+  
+  .contato {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .contato h2 {
+    margin-top: 50px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    font-weight: 400;
+  }
+  
+  .contato p {
+    margin: 20px 0 30px 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  [type='text'] {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 1em;
+    margin-top: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    border: none;
+    margin: 1em 0;
+    padding: 1.5em;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+  }
+  
+  button:hover {
+    background-color: rgba(0,0,0,.1);
+    border: 1px solid black;
+    color: black;
+  }
+  
+  .contato img {
+    width: 100%;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0; 
+    font-size: 15px;
+  }
+  
+  footer a {
+    color: white;
+  }
+  
