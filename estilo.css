@@ -9,7 +9,7 @@ body {
     max-width: 500px;
     margin: 5em auto;
     background-color: #F0F7F4;
-    box-shadow: 1px 1px 1px whitesmoke;
+    box-shadow: 1px 1px 5px black;
   }
   
   p, a {
