@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+    color: white;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300, 1fr));
+    min-height: 100vh;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-areas: 
+        "logo logo logo"
+        "main main main"
+        "footer footer footer";
+    }
+    .logo {
+      text-align: center;
+      grid-area: logo;
+    }
+    main {
+      text-align: left;
+      grid-area: main;
+    }
+    footer {
+      justify-content: center;
+      align-items: center;
+      grid-area: footer;
+    }
+  }
+    
+  
+  .logo {
+    padding: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  .cabecalho-container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    
+    display: grid;
+    grid-template-columns: auto;
+  }
+  
+  h1 {
+    padding: .3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 4em;
+  }
+  
+  hr {
+    width: 30%;
+    margin: auto;
+  }
+  
+  .dias {
+    padding: 1em;
+  }
+  
+  footer {
+    padding: 1.5em;
+    
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  a {
+    color: white;
+  }
