@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizinng: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  header {
+    margin: 50px;
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  
+  header h1 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  header span {
+    padding: 0 8px;
+    background-color: black;
+    color: #fff;
+  }
+  
+  /* FORMATA ÁREA PRINCIPAL */
+  .main-container {
+    max-width: 95%;
+    margin: auto;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .main-container {
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+  
+  .blogpost {
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+  }
+  
+  .blogpost img {
+    width: 100%;
+  }
+  
+  .blogpost h2,
+  .blogpost h2 + p{
+    padding: 10px 15px;
+  }
+  
+  .blogpost h2 + p span {
+    opacity: .7;
+  }
+  
+  .blogpost p:nth-of-type(2),
+  .comentarios {
+    padding: 20px 15px;
+  }
+  
+  .comentarios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .contagem {
+    background-color: black;
+    color: white;
+    padding: 0 10px;
+    border-radius: 20%;
+  }
+  
+  button {
+    margin: 15px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: black;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  /* FORMATA ASIDE */
+  .quemsou {
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+  }
+  
+  .quemsou img {
+    width: 100%;
+  }
+  
+  .quemsou h3, 
+  .quemsou h3 + p{
+    padding: 10px 15px;
+  }
+  
+  /* MAIS LIDAS */
+  .populares {
+    box-shadow: 0px 4px 10px rgba(0,0,0,.4);
+  }
+  
+  .populares h3 {
+    height: 50px;
+    line-height: 50px;
+    background-color: #e4e4e4;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 8px 15px;
+  }
+   
+  
+  .postpopular {
+    display: flex;
+    
+    background-color: white;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .postpopular:hover {
+    background-color: #e4e4e4;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .postpopular img {
+    width: 20%;
+    float: left;
+    margin-right: 20px;
+  }
