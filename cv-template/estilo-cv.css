@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #f1f1f1;
+    color: #757575;
+  }
+  
+  h1, h2, h3 {
+    font-size: 18px;
+  }
+  
+  .container-principal {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+  
+    border:1px solid teal;
+    padding: 1em;
+  }
+  
+  @media (max-width: 600px) {
+    .container-principal {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+  
+  /* CABEÇALHO, HABILIDADES, IDIOMAS */
+  header {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  .cabecalho-foto {
+    position: relative;
+  }
+  
+  .cabecalho-foto h1 {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+  
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-shadow: 0 0 10px black;
+    color: white;
+  }
+  
+  .cabecalho img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  address {
+    padding: 1.5em;
+    font-style: normal;
+  }
+  
+  address p {
+    padding-right: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .fas {
+    width: 10%;
+    color: teal;
+  }
+  
+  hr {
+    width: 70%;
+    margin: auto;
+  }
+  
+  .habilidades,
+  .idiomas {
+    padding: 0 1.5em;
+  }
+  
+  .habilidades h2, .idiomas h2 {
+    margin: 2em auto 1em;
+    text-transform: uppercase;
+  }
+  
+  .habilidades p,
+  .idiomas p {
+    margin-top: 10px;
+  }
+  
+  .idiomas {
+    margin-bottom: 2em;
+  }
+  
+  /* SKILL-CONTAINER */
+  .skill-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  .skill {
+    color: white;
+  }
+  
+  .hab1 {
+    width: 90%; background-color: teal;
+    border-radius: 30px;
+  }
+  .hab2 {
+    width: 80%; background-color: teal;
+    border-radius: 30px;
+  }
+  .hab3 {
+    width: 75%; background-color: teal;
+    border-radius: 30px;
+  }
+  .hab4 {
+    width: 60%; background-color: teal;
+    border-radius: 30px;
+  }
+  
+  .ingles {
+    width: 95%; 
+    background-color: teal;
+    border-radius: 30px;
+  }
+  .frances {
+    width: 60%; 
+    background-color: teal;
+    border-radius: 30px;
+  }
+  
+  /* EXPERIENCIAS, EDUCAÇÃO */
+  .experiencia-container, 
+  .educacao-container {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+    background-color: white;
+    padding: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .experiencia-container h2,
+  .educacao-container h2 {
+    font-size: 2em;
+    padding-bottom: 1em;
+  }
+  
+  .experiencia-container h3 {
+    text-shadow: 0 0 1px rgba(0,0,0,.3);
+  }
+  
+  .experiencia-container .fas,
+  .educacao-container .fas {
+    padding-right: 50px;
+  }
+  
+  .experiencia-container h3 + p,
+  .educacao-container h3 + p {
+    color: teal;
+  }
+  
+  .experiencia, 
+  .educacao {
+    padding: 1em 0;
+  }
+  
+  .experiencia p,
+  .educacao p {
+    padding-bottom: 10px;
+    color: black
+  }
+  
+  .experiencia p span {
+    background-color: teal;
+    color: white;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+  
+  .experiencia .far {
+    padding-right: 1em;
+  }
+  
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: teal;
+    color: white;
+    padding: 2em;
+    font-size: 1.1em;
+  }
+  
+  .social{
+    margin: 10px;
+  }
+  
+  .social i:hover {
+    transition: .5s;
+    font-size: 1.5em;
+    opacity: .8;
+  }
