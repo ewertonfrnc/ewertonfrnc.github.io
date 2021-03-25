@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.message-body {
+  background-color: white;
+  border-color: #3273dc;
+}
+
+figure {
+  opacity: .7;
+}
