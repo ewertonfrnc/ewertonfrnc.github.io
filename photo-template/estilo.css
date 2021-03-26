@@ -1,0 +1,11 @@
+.negrito {
+  font-weight: bolder;
+}
+
+.is-active {
+  background-color: #eee;
+}
+
+img {
+  margin-bottom: 10px;
+}
