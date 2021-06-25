@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ececec;
+  height: 100vh;
+
+  background-color: #fff;
+  padding: 2.5rem;
+
+  display: flex;
+}
+
+.aside {
+  flex-basis: 50rem;
+  padding: 3rem 5rem;
+  border-radius: 5px;
+  margin-right: 5rem;
+  background-color: #2d3439;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 8rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
+.viagens {
+  list-style: none;
+  height: 77vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.viagens::-webkit-scrollbar {
+  width: 0;
+}
+
+.viagem {
+  background-color: #42484d;
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+  /* cursor: pointer; */
+  border-left: 5px solid #00c46a;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+}
+
+.viagem__titulo {
+  font-size: 1.7rem;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.viagem__detalhes {
+  display: flex;
+  align-items: baseline;
+}
+
+.viagem__icone {
+  font-size: 1.8rem;
+  margin-right: 0.2rem;
+  height: 0.28rem;
+}
+
+.viagem__valor {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.viagem__unidade {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.form {
+  background-color: #42484d;
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+
+  /* height: 9.25rem; */
+  transition: all 0.5s, transform 1ms;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  flex: 0 0 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(214, 222, 224);
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.form__btn {
+  display: none;
+}
+
+.resultados {
+  flex: 1;
+  padding: 5px;
+  color: #2d3439;
+  /* box-shadow: 0 0.3rem 0.5rem rgba(66, 72, 77, 0.5); */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column;
+}
+
+.resultados__titulo {
+  /* text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700; */
+
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, salmon, firebrick);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  margin-top: 15rem;
+}
+
+.resultados__valor {
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn {
+  font-size: 2rem;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right, salmon, firebrick);
+  box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.5);
+
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.7);
+}
+
+/* 
+hr {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+} */

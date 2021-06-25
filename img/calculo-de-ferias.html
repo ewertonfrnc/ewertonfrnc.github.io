@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>IMG | Média de férias anteriores</title>
+  </head>
+  <body class="container">
+    <aside class="aside">
+      <img src="img/img-logo.png" class="logo" />
+
+      <ul class="viagens">
+        <form class="form">
+          <div class="form__row">
+            <label class="form__label">Destino</label>
+            <input
+              type="text"
+              class="form__input form__input--destino"
+              placeholder="Cidade"
+            />
+          </div>
+
+          <div class="form__row">
+            <label class="form__label">Semanas</label>
+            <input
+              type="number"
+              class="form__input form__input--semanas"
+              placeholder="Dias no destino"
+            />
+          </div>
+
+          <div class="form__row">
+            <label class="form__label">Pessoas</label>
+            <input
+              type="number"
+              class="form__input form__input--pessoas"
+              placeholder="Nª de acompanhantes"
+            />
+          </div>
+
+          <div class="form__row">
+            <label class="form__label">Hotelaria</label>
+            <input
+              type="number"
+              class="form__input form__input--hotelaria"
+              placeholder="Padrão de hotelaria"
+            />
+          </div>
+
+          <div class="form__row">
+            <label class="form__label">Gastos</label>
+            <input
+              type="number"
+              class="form__input form__input--gastos"
+              placeholder="Média de gastos"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+
+        <!-- <li class="viagem">
+          <h2 class="viagem__titulo">Viagem para Natal</h2>
+          <div class="viagem__detalhes">
+            <span class="viagem__icone">📅</span>
+            <span class="viagem__valor">1</span>
+            <span class="viagem__unidade">semana</span>
+          </div>
+          <div class="viagem__detalhes">
+            <span class="viagem__icone">👫</span>
+            <span class="viagem__valor">2</span>
+            <span class="viagem__unidade">pessoas</span>
+          </div>
+          <div class="viagem__detalhes">
+            <span class="viagem__icone">⭐</span>
+            <span class="viagem__valor">4</span>
+            <span class="viagem__unidade">estrelas</span>
+          </div>
+        </li> -->
+      </ul>
+    </aside>
+
+    <div class="resultados">
+      <h2 class="resultados__titulo">
+        Despesa mínima por semana de hospedagem sendo locatário(a) das férias
+      </h2>
+
+      <div class="resultados__valor">
+        
+      </div>
+      <button class="btn">Calcular</button>
+    </div>
+  </body>
+</html>
