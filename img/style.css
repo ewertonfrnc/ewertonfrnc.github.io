@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
@@ -23,6 +23,13 @@ body {
   display: flex;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    display: block;
+    padding: 1rem;
+  }
+}
+
 .aside {
   flex-basis: 50rem;
   padding: 3rem 5rem;
@@ -32,6 +39,13 @@ body {
 
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .aside {
+    flex: 1;
+    margin-right: 0;
+  }
 }
 
 .logo {
@@ -93,6 +107,15 @@ body {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 800px) {
+  .viagem {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .viagem__icone {
+  }
+}
+
 .form {
   background-color: #42484d;
   border-radius: 5px;
@@ -107,9 +130,21 @@ body {
   transition: all 0.5s, transform 1ms;
 }
 
+@media screen and (max-width: 800px) {
+  .form {
+    display: block;
+  }
+}
+
 .form__row {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .form__row {
+    display: block;
+  }
 }
 
 .form__label {
@@ -126,6 +161,12 @@ body {
   border: none;
   border-radius: 3px;
   background-color: rgb(214, 222, 224);
+}
+
+@media screen and (max-width: 800px) {
+  .form__label {
+    font-size: 1.2rem;
+  }
 }
 
 .form__input:focus {
@@ -167,6 +208,13 @@ body {
   margin-top: 15rem;
 }
 
+@media screen and (max-width: 800px) {
+  .resultados__titulo {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
 .resultados__valor {
   font-size: 3rem;
   width: 100%;
@@ -176,6 +224,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 800px) {
+  .resultados__valor {
+    font-size: 2rem;
+    margin: 2rem;
+  }
 }
 
 .btn {
@@ -196,7 +251,10 @@ body {
   box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.7);
 }
 
-/* 
-hr {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-} */
+@media screen and (max-width: 800px) {
+  .btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+}
