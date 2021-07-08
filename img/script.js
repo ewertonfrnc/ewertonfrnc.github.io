@@ -1,16 +1,23 @@
-"use strict";
+'use strict';
 
-const form = document.querySelector(".form");
-const containerViagens = document.querySelector(".viagens");
-const inputDestino = document.querySelector(".form__input--destino");
-const inputDias = document.querySelector(".form__input--semanas");
-const inputPessoas = document.querySelector(".form__input--pessoas");
-const inputHotelaria = document.querySelector(".form__input--hotelaria");
-const inputGastos = document.querySelector(".form__input--gastos");
+const form = document.querySelector('.form');
+const resultadosContainer = document.querySelector('.resultados');
+const containerViagens = document.querySelector('.viagens');
+/////////////////////////////////////////////////////
+const inputDestino = document.querySelector('.form__input--destino');
+const inputDias = document.querySelector('.form__input--semanas');
+const inputPessoas = document.querySelector('.form__input--pessoas');
+const inputHotelaria = document.querySelector('.form__input--hotelaria');
+const inputGastos = document.querySelector('.form__input--gastos');
 
-const gastosIndividuais = document.querySelector(".resultados__valor");
-
-const btn = document.querySelector(".btn");
+const gastosIndividuais = document.querySelector('.resultados__valor');
+/////////////////////////////////////////////////////
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btn = document.querySelector('.btn');
+const btnCloseModal = document.querySelector('.btn--close-modal');
+const btnOpenModal = document.querySelector('.btn--show-modal');
+/////////////////////////////////////////////////////
 
 class Viagem {
   constructor(destino, dias, pessoas, hotelaria, gastos) {
@@ -28,8 +35,8 @@ class App {
   #gastos = [];
 
   constructor() {
-    form.addEventListener("submit", this._novaViagem.bind(this));
-    btn.addEventListener("click", this._calcularMedia.bind(this));
+    form.addEventListener('submit', this._novaViagem.bind(this));
+    btn.addEventListener('click', this._calcularMedia.bind(this));
 
     inputDestino.focus();
   }
@@ -61,7 +68,8 @@ class App {
       inputPessoas.value =
       inputHotelaria.value =
       inputGastos.value =
-        "";
+        '';
+    inputDestino.focus();
   }
 
   _calcularMedia() {
@@ -73,10 +81,11 @@ class App {
 
     const media = somaDosGastos / this.#viagens.length;
     const html = `
-      <p>R$ ${media.toFixed(2)}
+      <p>R$ ${media.toFixed(2)}</p>
     `;
 
-    gastosIndividuais.insertAdjacentHTML("beforeend", html);
+    gastosIndividuais.innerText = '';
+    gastosIndividuais.insertAdjacentHTML('beforeend', html);
   }
 
   _insereViagem(viagem) {
@@ -104,8 +113,21 @@ class App {
     </li>
       `;
 
-    form.insertAdjacentHTML("afterend", html);
+    containerViagens.insertAdjacentHTML('beforeend', html);
   }
 }
 
 const app = new App();
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnOpenModal.addEventListener('click', openModal);
+btnCloseModal.addEventListener('click', closeModal);

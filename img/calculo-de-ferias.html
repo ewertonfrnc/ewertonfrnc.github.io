@@ -15,11 +15,11 @@
 
     <title>IMG | Média de férias anteriores</title>
   </head>
-  <body class="container">
-    <aside class="aside">
-      <img src="img/img-logo.png" class="logo" />
+  <body>
+    <div class="container">
+      <aside class="aside">
+        <img src="img/img-logo.png" class="logo" />
 
-      <ul class="viagens">
         <form class="form">
           <div class="form__row">
             <label class="form__label">Destino</label>
@@ -65,39 +65,46 @@
               placeholder="Média de gastos"
             />
           </div>
-          <button class="form__btn">OK</button>
+          <button class="form__btn">Salvar</button>
         </form>
+      </aside>
 
-        <!-- <li class="viagem">
-          <h2 class="viagem__titulo">Viagem para Natal</h2>
-          <div class="viagem__detalhes">
-            <span class="viagem__icone">📅</span>
-            <span class="viagem__valor">1</span>
-            <span class="viagem__unidade">semana</span>
-          </div>
-          <div class="viagem__detalhes">
-            <span class="viagem__icone">👫</span>
-            <span class="viagem__valor">2</span>
-            <span class="viagem__unidade">pessoas</span>
-          </div>
-          <div class="viagem__detalhes">
-            <span class="viagem__icone">⭐</span>
-            <span class="viagem__valor">4</span>
-            <span class="viagem__unidade">estrelas</span>
-          </div>
-        </li> -->
-      </ul>
-    </aside>
+      <div class="resultados">
+        <div class="resultados__titulo">
+          <h3>Últimas viagens</h3>
+        </div>
 
-    <div class="resultados">
-      <h2 class="resultados__titulo">
-        Despesa mínima por semana de hospedagem sendo locatário(a) das férias
-      </h2>
-
-      <div class="resultados__valor">
-        
+        <ul class="viagens">
+          <!-- <li class="viagem">
+            <h2 class="viagem__titulo">Viagem para Natal</h2>
+            <div class="viagem__detalhes">
+              <span class="viagem__icone">📅</span>
+              <span class="viagem__valor">1</span>
+              <span class="viagem__unidade">semana</span>
+            </div>
+            <div class="viagem__detalhes">
+              <span class="viagem__icone">👫</span>
+              <span class="viagem__valor">2</span>
+              <span class="viagem__unidade">pessoas</span>
+            </div>
+            <div class="viagem__detalhes">
+              <span class="viagem__icone">⭐</span>
+              <span class="viagem__valor">4</span>
+              <span class="viagem__unidade">estrelas</span>
+            </div>
+          </li> -->
+        </ul>
+        <button class="btn btn--show-modal">Calcular</button>
       </div>
-      <button class="btn">Calcular</button>
     </div>
+
+    <div class="modal hidden">
+      <button class="btn--close-modal">x</button>
+      <h1>
+        Despesa mínima com hospedagem sendo locatário(a) das férias
+      </h1>
+      <p><span class="resultados__valor">R$ 5400</span></p>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>

@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #2d3439;
+  --secondary-color: #42484d;
+  --tertiary-color: #d6dee0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,41 +16,40 @@ html {
 }
 
 body {
+  background-color: #f3f3f3;
+  height: 100vh;
+  width: 100vw;
   font-family: 'Manrope', sans-serif;
+  padding: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  background-color: var(--primary-color);
+
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
   color: #ececec;
-  height: 100vh;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 
-  background-color: #fff;
-  padding: 2.5rem;
+  width: 100%;
+  height: 100%;
 
   display: flex;
-}
-
-@media screen and (max-width: 800px) {
-  body {
-    display: block;
-    padding: 1rem;
-  }
+  flex-flow: row wrap;
 }
 
 .aside {
-  flex-basis: 50rem;
-  padding: 3rem 5rem;
-  border-radius: 5px;
-  margin-right: 5rem;
-  background-color: #2d3439;
-
-  display: flex;
-  flex-direction: column;
+  flex: 1;
 }
 
 @media screen and (max-width: 800px) {
   .aside {
-    flex: 1;
-    margin-right: 0;
+    margin-right: 2rem;
   }
 }
 
@@ -52,6 +57,61 @@ body {
   height: 8rem;
   align-self: center;
   margin-bottom: 4rem;
+  margin-left: 4rem;
+}
+
+.form {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.5rem;
+
+  transition: all 0.5s, transform 1ms;
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  flex: 0 1 50%;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(214, 222, 224);
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.form__btn {
+  /* display: none; */
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: var(--primary-color);
+  font-size: 2rem;
+  padding: 0.5rem 0.25rem;
+  background-color: var(--tertiary-color);
+}
+
+.form__btn:active {
+  transform: scale(0.98);
 }
 
 .viagens {
@@ -108,94 +168,48 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .viagem {
-    display: flex;
-    flex-flow: column wrap;
+  body {
+    overflow: visible;
   }
-  .viagem__icone {
+  .container {
+    flex-flow: row wrap;
+    width: auto;
+    /* height: 50%; */
   }
-}
-
-.form {
-  background-color: #42484d;
-  border-radius: 5px;
-  padding: 1.5rem 2.25rem;
-  margin-bottom: 1.75rem;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 2.5rem;
-
-  /* height: 9.25rem; */
-  transition: all 0.5s, transform 1ms;
-}
-
-@media screen and (max-width: 800px) {
-  .form {
-    display: block;
+  .form__label,
+  .form__input {
+    font-size: 1.3rem;
   }
-}
 
-.form__row {
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (max-width: 800px) {
-  .form__row {
-    display: block;
+  .viagem__icone,
+  .viagem__unidade,
+  .viagem__titulo,
+  .viagem__valor {
+    font-size: 1.3rem;
   }
-}
-
-.form__label {
-  flex: 0 0 50%;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.form__input {
-  width: 100%;
-  padding: 0.3rem 1.1rem;
-  font-family: inherit;
-  font-size: 1.4rem;
-  border: none;
-  border-radius: 3px;
-  background-color: rgb(214, 222, 224);
-}
-
-@media screen and (max-width: 800px) {
-  .form__label {
-    font-size: 1.2rem;
-  }
-}
-
-.form__input:focus {
-  outline: none;
-  background-color: #fff;
-}
-
-.form__btn {
-  display: none;
 }
 
 .resultados {
   flex: 1;
   padding: 5px;
-  color: #2d3439;
+  color: var(--tertiary-color);
   /* box-shadow: 0 0.3rem 0.5rem rgba(66, 72, 77, 0.5); */
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-flow: column;
+  height: 90%;
+  /* border: 1px solid salmon; */
+}
+
+@media screen and (max-width: 800px) {
+  .resultados {
+    flex: 0.8;
+  }
 }
 
 .resultados__titulo {
-  /* text-transform: uppercase;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700; */
-
   font-size: 2.7rem;
   text-transform: uppercase;
   text-align: center;
@@ -205,32 +219,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
-  margin-top: 15rem;
-}
-
-@media screen and (max-width: 800px) {
-  .resultados__titulo {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-  }
-}
-
-.resultados__valor {
-  font-size: 3rem;
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-
-@media screen and (max-width: 800px) {
-  .resultados__valor {
-    font-size: 2rem;
-    margin: 2rem;
-  }
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 .btn {
@@ -246,15 +236,74 @@ body {
   transition: all 0.2s;
 }
 
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.7);
+.btn:active {
+  transform: scale(0.98);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  transition: all 0.3s;
+}
+
+.modal h1 {
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, salmon, firebrick);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.modal p {
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.btn--close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 800px) {
-  .btn {
-    padding: 1rem 1.5rem;
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-  }
 }
