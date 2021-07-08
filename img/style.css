@@ -167,28 +167,6 @@ body {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 800px) {
-  body {
-    overflow: visible;
-  }
-  .container {
-    flex-flow: row wrap;
-    width: auto;
-    /* height: 50%; */
-  }
-  .form__label,
-  .form__input {
-    font-size: 1.3rem;
-  }
-
-  .viagem__icone,
-  .viagem__unidade,
-  .viagem__titulo,
-  .viagem__valor {
-    font-size: 1.3rem;
-  }
-}
-
 .resultados {
   flex: 1;
   padding: 5px;
@@ -246,11 +224,12 @@ body {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  height: 50vh;
+  width: 60%;
   background-color: white;
   padding: 6rem;
   border-radius: 5px;
@@ -293,9 +272,10 @@ body {
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -306,4 +286,78 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    overflow: visible;
+  }
+  .container {
+    flex-flow: row wrap;
+    width: auto;
+    height: auto;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form__label,
+  .form__input {
+    font-size: 1.3rem;
+  }
+
+  .viagem {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .viagem__icone,
+  .viagem__unidade,
+  .viagem__titulo,
+  .viagem__valor {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .resultados__titulo {
+    font-size: 2rem;
+  }
+
+  .modal {
+    height: 80%;
+  }
+
+  .modal h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .resultados {
+    flex: 1;
+  }
+
+  .resultados__titulo {
+    font-size: 1.5rem;
+  }
+
+  .viagem {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    height: 90%;
+    padding: 3rem;
+  }
+
+  .modal h1 {
+    font-size: 1.5rem;
+  }
+
+  .resultados__valor p {
+    font-size: 2rem;
+  }
 }
