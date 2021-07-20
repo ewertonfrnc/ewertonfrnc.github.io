@@ -5,98 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
 
-    <script defer src="script.js"></script>
+    <title>Filmes em alta | Atualizado diariamente</title>
 
-    <title>Movie App</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
-      <h1>O que tá rolando?</h1>
-      <form class="form">
-        <input type="text" placeholder="Procurar..." class="search" />
-      </form>
+      <div class="header__titulo">
+        <h1>
+          <span class="header__titulo--principal"> Filmes em alta </span>
+
+          <span class="header__titulo--subtitulo">Atualizado diariamente</span>
+        </h1>
+      </div>
     </header>
 
     <main class="main">
-      <!-- <div class="movie">
-        <img
-          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80"
-          alt="Movie"
-        />
+      <form class="form">
+        <label for="filme" class="form__label">Procure por um filme:</label>
+        <input type="search" name="filme" id="filme" class="form__input" />
+      </form>
 
-        <div class="movie-info">
-          <h3 class="movie-title">Movie title</h3>
-          <span class="green">9.8</span>
-        </div>
+      <section class="section filmes">
+        <!-- <div class="filme">
+          <img
+            src="https://image.tmdb.org/t/p/w1280/rKq1Vlw0Bqe2EEvdmIkkkgPQAGf.jpg"
+            alt="Cartaz do filme"
+            class="filme__img"
+          />
 
-        <div class="overview">
-          <h3>Overview</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            soluta error voluptatibus possimus autem molestiae, quis repellat
-            vel debitis tempora eum dignissimos odio, repudiandae consequuntur
-            facilis doloribus? Accusamus, qui deserunt.
-          </p>
-        </div>
-      </div>
-
-      <div class="movie">
-        <img
-          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80"
-          alt="Movie"
-        />
-
-        <div class="movie-info">
-          <h3 class="movie-title">Movie title</h3>
-          <span class="green">9.8</span>
-        </div>
-
-        <div class="overview">
-          <h3>Overview</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            soluta error voluptatibus possimus autem molestiae, quis repellat
-            vel debitis tempora eum dignissimos odio, repudiandae consequuntur
-            facilis doloribus? Accusamus, qui deserunt.
-          </p>
-        </div>
-      </div>
-
-      <div class="movie">
-        <img
-          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=740&q=80"
-          alt="Movie"
-        />
-        <div class="movie-info">
-          <h3 class="movie-title">Movie title</h3>
-          <span class="green">9.8</span>
-        </div>
-
-        <div class="overview">
-          <h3>Overview</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            soluta error voluptatibus possimus autem molestiae, quis repellat
-            vel debitis tempora eum dignissimos odio, repudiandae consequuntur
-            facilis doloribus? Accusamus, qui deserunt.
-          </p>
-        </div>
-      </div> -->
+          <div class="filme__info">
+            <h2 class="filme__info--titulo">Viúva Negra</h2>
+            <p class="filme__info--ano">07 de jul de 2021</p>
+          </div>
+          <div class="filme__sinopse">
+            <h3>Sinopse</h3>
+            <p>
+              Natasha Romanoff "Viúva Negra" precisa confrontar partes de sua
+              história quando surge uma conspiração perigosa ligada ao seu
+              passado. Perseguida por uma força que não irá parar até
+              derrotá-la, Natasha terá que lidar com sua antiga vida de espiã, e
+              também reencontrar membros de sua família que deixou para trás
+              antes de se tornar parte dos Vingadores.
+            </p>
+          </div>
+        </div> -->
+      </section>
     </main>
   </body>
 </html>
